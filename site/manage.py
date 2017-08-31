@@ -54,9 +54,8 @@ def other_upload():
 
 def update_static_res():
     static_folder = os.path.join(os.getcwd(), 'app/static')
-    build_folder = os.path.join(os.getcwd(), 'app/build')
     static_build_folder = os.path.join(os.getcwd(), 'app/build/static')
-    shutil.rmtree(build_folder)
+    shutil.rmtree(static_build_folder)
     shutil.copytree(static_folder, static_build_folder)
 
 if __name__ == '__main__':

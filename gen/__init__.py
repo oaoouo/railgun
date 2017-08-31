@@ -67,6 +67,7 @@ class Gen(object):
         os.makedirs(self.root_path)
         built_urls = set()
         built_endpoints = set()
+        print(list(self._gen_all_urls()))
         for url, endpoint in self._gen_all_urls():
             built_endpoints.add(endpoint)
             if url in built_urls:
@@ -174,13 +175,13 @@ class UrlForGen(object):
 
         def gens(endpoint, values):
             """
-            ⚡️ 通过flask url processors获取所有url_for调用信息
+            url processors can automatically inject values into a call for url_for() automatically.
             http://flask.pocoo.org/docs/0.11/patterns/urlprocessors/
             """
             if self._enabled:
                 self.calls.append((endpoint, values.copy()))
-        self.app.url_default_functions.setdefault(None, []).insert(0, gens)
         # {None: [<function gens at xxxx>]}
+        self.app.url_default_functions.setdefault(None, []).insert(0, gens)
 
     def __enter__(self):
         self._lock.acquire()
