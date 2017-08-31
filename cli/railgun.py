@@ -124,7 +124,7 @@ def init(dev, site_name):
         app_path = os.path.join(dst, 'app/')
         os.chdir(dst)
         # default theme: https://github.com/neo1218/ship-theme-cat
-        os.popen('git clone https://github.com/neo1218/ship-theme-cat.git app/themes/cat')
+        os.popen('git clone https://github.com/oaoouo/railgun-theme-cat.git app/themes/cat')
         os.popen('railgun upgrade cat')
 
     finish_init_info()
