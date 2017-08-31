@@ -1,0 +1,4 @@
+**/*.pyc
+venv/
+dist/
+railgun_cli.egg-info/
