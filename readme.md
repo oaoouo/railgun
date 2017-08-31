@@ -79,11 +79,15 @@ $ pip install --editable .
 
 ## CopyRight
 
-Origin Project: https://github.com/neo1218/railgun
+Old Project: https://github.com/neo1218/railgun
 <br/>
 MIT, check LICENSE for detail.
 
 ## Change Log
+
+### 20170831
+
+fix bug :(
 
 ### 20170830
 
