@@ -96,5 +96,5 @@ bye bye neo1218 :)
 ## ToDo
 
 + [ ] theme system
-+ [ ] speed up
++ [x] speed up
 + [ ] reverse generation
