@@ -46,6 +46,7 @@ setup(
         'click',
         'Flask',
         'Flask-Flatpages',
+        'Flask-Script',
     ],
     entry_points=entry_points,
     classifiers=[

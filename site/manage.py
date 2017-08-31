@@ -6,17 +6,19 @@
 """
 
 import os
-import shutil
 import sys
+import shutil
+import platform
 from app import app
 from gen import Gen
 from flask_script import Manager
 
 
 """编码设置"""
-# reload(sys) is evil :)
-reload(sys)
-sys.setdefaultencoding('utf-8')
+if (platform.python_version().split('.')[0] == '2'):
+    # reload(sys) is evil :)
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
 
 
 """Git配置"""
@@ -55,7 +57,8 @@ def other_upload():
 def update_static_res():
     static_folder = os.path.join(os.getcwd(), 'app/static')
     static_build_folder = os.path.join(os.getcwd(), 'app/build/static')
-    shutil.rmtree(static_build_folder)
+    if os.path.isdir(static_build_folder):
+        shutil.rmtree(static_build_folder)
     shutil.copytree(static_folder, static_build_folder)
 
 if __name__ == '__main__':

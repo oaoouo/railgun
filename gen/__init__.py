@@ -67,14 +67,13 @@ class Gen(object):
         os.makedirs(self.root_path)
         built_urls = set()
         built_endpoints = set()
-        print(list(self._gen_all_urls()))
         for url, endpoint in self._gen_all_urls():
             built_endpoints.add(endpoint)
             if url in built_urls:
                 continue
             built_urls.add(url)
             self._build_file(url)
-        return built_urls
+        # return built_urls
 
     def has_no_empty_params(self, rule):
         defaults = rule.defaults if rule.defaults is not None else ()
@@ -138,7 +137,7 @@ class Gen(object):
         base_url = self.app.config['GEN_BASE_URL']
         with self.url_fors:
             # find all app url_for and build url
-            response = gen_client.get(url, follow_redirects=True,
+            response = yield gen_client.get(url, follow_redirects=True,
                                       base_url=base_url)
         destination_path = self.urlpath_to_filepath(url)
         filename = os.path.join(self.root_path, *destination_path.split('/'))
