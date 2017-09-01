@@ -1,4 +1,5 @@
 **/*.pyc
 venv/
 dist/
+**/*__pycache__/
 railgun_cli.egg-info/
