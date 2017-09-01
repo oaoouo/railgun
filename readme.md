@@ -85,6 +85,10 @@ MIT, check LICENSE for detail.
 
 ## Change Log
 
+### 20170901
+
+speed up! generate 200 files in just 5s :)
+
 ### 20170831
 
 fix bug :(
@@ -95,6 +99,7 @@ bye bye neo1218 :)
 
 ## ToDo
 
-+ [ ] theme system
 + [x] speed up
++ [ ] unit tests
++ [ ] theme system
 + [ ] reverse generation
