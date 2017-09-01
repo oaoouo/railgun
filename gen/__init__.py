@@ -179,7 +179,8 @@ class UrlForGen(object):
             url processors can automatically inject values into a call for url_for() automatically.
             http://flask.pocoo.org/docs/0.11/patterns/urlprocessors/
             """
-            if self._enabled:
+            if self._enabled \
+            and ((endpoint, values) not in self.calls):
                 self.calls.append((endpoint, values.copy()))
         # {None: [<function gens at xxxx>]}
         self.app.url_default_functions.setdefault(None, []).insert(0, gens)
