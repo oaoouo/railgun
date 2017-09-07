@@ -86,25 +86,23 @@ $ pip install --editable .
 $ py.test -s
 ```
 
-## CopyRight
+## Change Logs
 
-Old Project: https://github.com/neo1218/railgun
-<br/>
-MIT, check LICENSE for detail.
+### 20170907
 
-## Change Log
++ add tests!
 
 ### 20170901
 
-speed up! generate 200 files in just 5s :)
++ speed up! generate 200 files in just 5s :)
 
 ### 20170831
 
-fix bug :(
++ fix bug :(
 
 ### 20170830
 
-bye bye neo1218 :)
++ bye bye neo1218 :) new life :(
 
 ## ToDo
 
@@ -112,3 +110,9 @@ bye bye neo1218 :)
 + [x] tests
 + [ ] theme system
 + [ ] reverse generation
+
+## CopyRight
+
+Old Project: https://github.com/neo1218/railgun
+<br/>
+MIT, check LICENSE for detail.
