@@ -77,6 +77,15 @@ $ cd railgun
 $ pip install --editable .
 ```
 
+## Test
+
+```shell
+$ git clone https://github.com/oaoouo/railgun/ railgun
+$ cd railgun
+$ pip install --editable .
+$ py.test -s
+```
+
 ## CopyRight
 
 Old Project: https://github.com/neo1218/railgun
@@ -100,6 +109,6 @@ bye bye neo1218 :)
 ## ToDo
 
 + [x] speed up
-+ [ ] unit tests
++ [x] tests
 + [ ] theme system
 + [ ] reverse generation
