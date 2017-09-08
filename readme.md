@@ -108,6 +108,7 @@ $ py.test -s
 
 + [x] speed up
 + [x] tests
++ [ ] logging system
 + [ ] theme system
 + [ ] reverse generation
 
