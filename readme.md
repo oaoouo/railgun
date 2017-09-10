@@ -86,7 +86,15 @@ $ pip install --editable .
 $ py.test -s
 ```
 
+## More details of railgun
+
++ [一起写一个静态博客生成器](https://oaoouo.github.io/static-generator/)
+
 ## Change Logs
+
+### 20170910
+
++ add blog :)
 
 ### 20170907
 
